@@ -16,9 +16,9 @@ import org.junit.Test;
  *
  * @author zhengxt
  */
-public class LoginTest {
+public class LoginFromFileTest {
 
-    public LoginTest() {
+    public LoginFromFileTest() {
     }
 
     @BeforeClass
