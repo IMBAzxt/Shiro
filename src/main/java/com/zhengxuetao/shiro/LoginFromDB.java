@@ -17,12 +17,12 @@ import org.apache.shiro.util.Factory;
  *
  * @author zhengxt
  */
-public class LoginFromFile {
+public class LoginFromDB {
 
     public void testLogin(String account, String pwd) {
         //1、获取 SecurityManager 工厂，此处使用 Ini 配置文件初始化 SecurityManager
         Factory<SecurityManager> factory
-                = new IniSecurityManagerFactory("classpath:shiro.ini");  //放在src/main/resources下可以通过classpath:文件名获取。
+                = new IniSecurityManagerFactory("classpath:shiro-jdbc-realm.ini");  //放在src/main/resources下可以通过classpath:文件名获取。
         //2、得到 SecurityManager 实例 并绑定给 SecurityUtils
         SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
@@ -35,6 +35,7 @@ public class LoginFromFile {
             subject.login(token);
         } catch (AuthenticationException e) {
             //5、身份验证失败
+            e.printStackTrace();
             System.out.println("登录失败");
             throw e;
         }
