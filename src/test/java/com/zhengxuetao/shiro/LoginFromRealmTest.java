@@ -7,6 +7,8 @@ package com.zhengxuetao.shiro;
 
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.util.ThreadContext;
+import org.junit.After;
 import org.junit.Test;
 
 /**
@@ -16,6 +18,12 @@ import org.junit.Test;
 public class LoginFromRealmTest {
 
     public LoginFromRealmTest() {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        ThreadContext.unbindSubject();//退出时请解除绑定Subject到线程 否则对下次测试造成影响
+        //SecurityUtils.getSubject().logout(); 
     }
 
     @Test
