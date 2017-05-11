@@ -1,0 +1,85 @@
+<div resize ng-controller="kafkaMonitorCtrl" style="height: 98%;text-align: center;">
+    <div class="cm cm-2">
+    </div>
+    <div class="cm cm-14">
+        <div class="cm cm-14" style="height: 3%"></div>
+        <div class="cm cm-14" style="height: 8%">
+            <table class="dsf_solidLine" style="text-align: center; height: 50%;width: 100%;">
+
+<!--                <span style="float:left;margin-left: 10px;margin-top: 10px">开始时间</span>-->
+                <div  class="kafkaButton" style="float: left;width: 1.4rem;height: 25px" ng-style="{'margin-top':  heightCoefficient * 1 + 'px'}">开始时间</div>
+
+                <ul class="list-inline" style="float: left; margin-left: 10px;margin-right: 10px;margin-left: 10px;margin-top: 2px">
+                    <!--                        <li>
+                                                <select ng-model="params.begintime"  class="form-control dsf_button" style="padding-top: 0px;color: #2c74c2;" >    
+                    
+                                                    <option ng-repeat="type in data.data.type" value="{{type.id}}" style="color: white;font-size: 14px;">
+                                                        {{type.name}}
+                                                    </option>
+                                                </select>
+                                            </li>-->
+<!--                    <li class="laydate-icon" id="start" style="width:200px; margin-right:10px;" ng-model="params.begintime"></li>-->
+                    <input id="beginTime" class="dateStyle kafka_button" type="text" ng-click="beginTimeClick()" ng-model="params.begintime" style="color: #ADADAD;width:2rem;font-size: 14px">
+                </ul>
+<!--                <span style="float:left;margin-left: 10px;margin-top: 10px">结束时间</span>-->
+                <div  class="kafkaButton" style="float: left;width:1.4rem;height: 25px" ng-style="{'margin-top':  heightCoefficient * 1 + 'px'}">结束时间</div>
+
+                <ul class="list-inline" style="float: left; margin-right: 10px;margin-left: 10px;margin-top: 2px">
+<!--                    <li class="laydate-icon" id="end" style="width:200px;" ng-model="params.endtime"></li>-->
+                    <input id="endTime" class="dateStyle kafka_button" type="text" ng-click="endTimeClick()" ng-model="params.endtime" style="color: #ADADAD;width:2rem;font-size: 14px">
+                </ul>
+<!--                <span style="float:left;margin-left: 10px;margin-top: 10px">类型</span>-->
+                <div  class="kafkaButton" style="float: left;width: 1rem;height: 25px" ng-style="{'margin-top':  heightCoefficient * 1 + 'px'}">类型</div>
+
+                <ul class="list-inline" style="float: left; margin-left: 10px;margin-right: 10px">
+
+
+                    <li>
+                        <select ng-model="params.type"  class="form-control kafka_button" style="padding-top: 0px;color: #ADADAD;height: 27px" >    
+                            <option ng-repeat="type in data.data.type" value="{{type.id}}" style="color:  #ADADAD;font-size: 14px;">
+                                {{type.name}}
+                            </option>
+                        </select>
+                    </li>
+                </ul>
+                <div  class="kafkaButton" style="float: left;width: 1rem;height: 25px" ng-style="{'margin-top':  heightCoefficient * 1 + 'px'}">地市</div>
+                <ul class="list-inline" style="float: left; margin-left: 10px;">
+
+                    <li>
+                        <select ng-model="params.city"  class="form-control kafka_button" style="padding-top: 0px;color: #ADADAD;height: 27px" >    
+
+                            <option ng-repeat="city in data.data.city" value="{{city.id}}" style="color: #ADADAD;font-size: 14px;">
+                                {{city.name}}
+                            </option>
+                        </select>
+                    </li>
+
+                </ul>
+
+                </td>
+                <div  class="kafkaButton" style="float: right;width: 1rem;height: 25px" ng-style="{'margin-top':  heightCoefficient * 1 + 'px'}" ng-click="data.events.search()">查询</div>
+            </table>
+
+        </div>
+        <div class="cm cm-14" style="height: 4%">
+            <div  ng-class="{true:'kafkaButtonActive', false:'kafkaButtonUnActive'}[params.flag==='1']" ng-click="FlagClick('1')" class="cm kafkaselectButton" style="height: 25px">省网+三方</div>
+            <div  ng-class="{true:'kafkaButtonActive', false:'kafkaButtonUnActive'}[params.flag==='2']" ng-click="FlagClick('2')" class="cm kafkaselectButton" style="height: 25px">idc+cache</div>
+        </div>
+        <div class="cm cm-14" style="height: 85%">
+            <div class="cm cm-14" style="height: 5%"></div>
+            <div box-height="90%" class="cm cm-14" style="height: 90%">
+                <div id="shareStateLine"  ng-if="shareStatistics.events.updateStatus === RQ.SUCCESS || shareStatistics.events.updateStatus === RQ.LOADING" resize echart option="shareStatistics.data.option" style="height: 90%;width: 100%;" >
+                    <div  ng-if="shareStatistics.events.updateStatus === RQ.FAIL || shareStatistics.events.updateStatus === RQ.NODATA" style="height: 80%;width: 100%;text-align: center;">
+                        <div>暂无数据</div>
+                        <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': +heightCoefficient * 10 + 'px'}">
+                    </div>
+                    <div ng-if="shareStatistics.events.updateStatus === RQ.LOADING" style="height: 80%;width: 100%;text-align: center;">
+                        <img style="padding-left: 0.1rem;"  src="img/coss/loading.gif" alt="" ng-style="{'padding-top': +heightCoefficient * 15 + 'px'}">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

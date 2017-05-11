@@ -1,0 +1,216 @@
+<div  ng-controller="cacheCtrl" class="cm cm-16">
+    <div class="cm-15 block content-main" style="height: 49%;">
+        <div class="block-inner" >
+            <div class="cm cm-8">
+                <div class="cm-cmnet" style="height: 15%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{table.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="table.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-cmnet" style="height: 75%;"  custom-scrollbar box-height="75%">
+                    <table ng-if="table.data.updateStatus === RQ.SUCCESS" class="" style="width: 90%;">
+                        <thead>
+                            <tr class="tableHead">
+                                <th class="tableTh" ng-repeat=" thead in table.data.theadList"  ng-style="{'width': + thead.width + 'rem'}">
+                                    {{thead.name}}<br>{{thead.unit}}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tableTr commonPointer"
+                                ng-repeat="tbody in table.data.tbodyList track by $index"
+                                ng-click="table.events.lineClick(tbody)" >
+                                <td ng-repeat="item in table.data.theadList"
+                                    ng-style="{'width': + item.width + 'rem'}"
+                                    ng-class="{true:'tableActive', false:''}[commonParams.link_group_id === tbody.link_group_id]"
+                                    class="tableTd">
+                                    {{tbody[item.key_name]}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div ng-if="table.data.updateStatus === RQ.FAIL || table.data.updateStatus === RQ.NODATA || table.data.updateStatus === RQ.LOADING" style="height: 90%;width: 100%;text-align: center;">
+                        <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': + heightCoefficient * 8 + 'px'}">
+                    </div>
+                </div>
+                <div class="cm-cmnet" style="margin-left: 3rem;height: 10%;">
+                    <div ng-if="table.page.totalPage > 1"
+                         page
+                         current_page="table.page.currentPage"
+                         page_size="table.page.pageSize"
+                         total_result="table.page.totalResult"
+                         total_page="table.page.totalPage"
+                         show_page="table.page.showPage"
+                         previous_page="table.page.previousPage()"
+                         next_page="table.page.nextPage()"
+                         page_click="table.page.pageClick(currentPage)">
+                    </div>
+                </div>
+            </div>
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 15%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{exportTrend.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="exportTrend.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 85%;">
+                    <div ng-if="exportTrend.data.updateStatus === RQ.SUCCESS" resize echart option="exportTrend.data.option" style="height: 100%;width: 100%;"></div>
+                    <div ng-if="exportTrend.data.updateStatus === RQ.FAIL || exportTrend.data.updateStatus === RQ.NODATA || exportTrend.data.updateStatus === RQ.LOADING" style="height: 90%;width: 100%;text-align: center;">
+                        <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': + heightCoefficient * 3 + 'px'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cm-15" style="height: 2%;"></div>
+    <div class="cm-15 block content-main" style="height: 49%;">
+        <div class="block-inner" >
+            <div class="cm cm-7_5" style="margin: 0 0.2rem 0 0.3rem;">
+                <div class="cm-7_5" style="height: 8%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{serviceNet.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="serviceNet.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7_5" style="height: 87%;">
+                    <div  style="height: 10%;font-size: 0.15rem;">
+                        <!--<div class="cm cmnetButton" style="margin-right: 0.3rem;">TOPN内容</div>-->
+                        <div  ng-class="{true:'buttonActive', false:'buttonUnActive'}[serviceNet.data.serviceType === 'web']" ng-click="serviceNet.events.serviceTypeClick('web')" class="cm netButton" >网页</div>
+                        <div  ng-class="{true:'buttonActive', false:'buttonUnActive'}[serviceNet.data.serviceType === 'video']" ng-click="serviceNet.events.serviceTypeClick('video')" class="cm netButton" >视频</div>
+                        <div  ng-class="{true:'buttonActive', false:'buttonUnActive'}[serviceNet.data.serviceType === 'game']" ng-click="serviceNet.events.serviceTypeClick('game')" class="cm netButton" >游戏</div>
+                        <div  ng-class="{true:'buttonActive', false:'buttonUnActive'}[isExportActive]" ng-init="isExportActive = false" ng-mousedown="isExportActive = true" ng-mouseup="isExportActive = false"class="cm netButton" style="float: right;">
+                            <downloadexcel model-Flag="serviceNet.data.modelFlag" post-Params="serviceNet.data.postParams" excel-Name="serviceNet.data.excelName"></downloadexcel>
+                        </div>
+                        <div  ng-class="{true:'buttonActive', false:'buttonUnActive'}[serviceNet.data.isDetailActive]" ng-click="serviceNet.events.serviceDetailClick('detail')" class="cm netButton" style="float: right;">报表</div>
+                    </div>
+                    <div ng-if="!serviceNet.data.isDetailActive" class="cm-7_5" style="height: 90%;">
+                        <div class="cm-7_5" style="height: 10%;font-size: 0.15rem;">
+                            <div class="cm cm-2"></div>
+                            <div class="cm contentNetLegendWidth">
+                                <div class="progress-bar-idc netLegend contentLegendPR" ></div>
+                                <div>IDC</div>
+                            </div>
+                            <div class="cm contentNetLegendWidth" style="width: 0.7rem;">
+                                <div class="progress-bar-cache netLegend contentLegendPR" ></div>
+                                <div>Cache</div>
+                            </div>
+                            <div class="cm contentNetLegendWidth">
+                                <div class="progress-bar-provinceOuter netLegend contentLegendPR" ></div>
+                                <div>省外</div>
+                            </div>
+                            <div class="cm contentNetLegendWidth">
+                                <div class="progress-bar-directLink netLegend contentLegendPR" ></div>
+                                <div>直连</div>
+                            </div>
+                            <div class="cm contentNetLegendWidth">
+                                <div class="progress-bar-netOuter netLegend contentLegendPR" ></div>
+                                <div>网外</div>
+                            </div>
+                            <div class="cm contentNetLegendWidth">
+                                <div class="progress-bar-other netLegend contentLegendPR" ></div>
+                                <div>其他</div>
+                            </div>
+                            <div class="cm" ng-click="serviceNet.events.orderByQa()"
+                                 style="width: 1.5rem;font-size: 0.15rem;cursor: pointer;"
+                                 >
+                                <p style="float: right;">
+                                    {{serviceNet.data.orderByShowName}}
+                                </p>
+                            </div>
+                        </div>
+                        <!--<div ng-if="serviceNet.data.updateStatus === RQ.SUCCESS" resize echart option="serviceNet.data.option" click_function="serviceNet.events.serviceNetClick(data)" style="height: 100%;width: 100%;"></div>-->
+                        <div  ng-if="serviceNet.data.updateStatus === RQ.SUCCESS" 
+                              ng-repeat="tbody in serviceNet.data.tbodyList track by $index"
+                              ng-class="{true:'progressActive', false:''}[tbody.service_id == serviceNet.data.serviceId]"
+                              ng-click="serviceNet.events.serviceNetClick(tbody)"
+                              net-tooltips data="tbody" unit="Mbps" class="cm-6" style="height: 8%;cursor: pointer;"
+                              >
+                            <div class="cm cm-1">
+                                <p style="font-size: 0.15rem;float: right;padding-right: 10px;">
+                                    {{tbody.simpleName}}
+                                </p>
+                            </div>
+                            <div  class="cm" style="padding-top: 6px;width: 5.5rem;">
+                                <uib-progress max='tbody.total_mbps_d' style="height: 7px;border-radius:0px;">
+                                    <uib-bar value="tbody.idc_mbps_d" type="idc"></uib-bar>
+                                    <uib-bar value="tbody.cache_mbps_d" type="cache"></uib-bar>
+                                    <uib-bar value="tbody.province_outer_mbps_d" type="provinceOuter"></uib-bar>
+                                    <uib-bar value="tbody.direct_link_mbps_d" type="directLink"></uib-bar>
+                                    <uib-bar value="tbody.net_outer_mbps_d" type="netOuter"></uib-bar>
+                                    <uib-bar value="tbody.other_mbps_d" type="other"></uib-bar>
+                                </uib-progress>
+                            </div>
+                            <div  class="cm cm-1">
+                                <p style="font-size: 0.15rem;text-align: center;">
+                                    {{tbody[serviceNet.data.orderByCol]}}
+                                </p>
+                            </div>
+                        </div>
+                        <div ng-if="serviceNet.data.updateStatus === RQ.FAIL || serviceNet.data.updateStatus === RQ.NODATA || serviceNet.data.updateStatus === RQ.LOADING" style="height: 90%;width: 100%;text-align: center;">
+                            <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': + heightCoefficient * 3 + 'px'}">
+                        </div>
+                    </div>
+                    <div ng-if="serviceNet.data.isDetailActive" class="cm-6" style="height: 90%;">
+                        <div class="cm-7" custom-scrollbar box-height="90%">
+                            <table  ng-if="serviceNet.data.updateStatus === RQ.SUCCESS" class="" border="1px" cellspacing="0px" style="width: 90%;">
+                                <thead>
+                                    <tr class="tableHead">
+                                        <th class="tableTh" ng-repeat=" thead in serviceNet.data.theadList" ng-style="{'width': + thead.width + 'rem'}">
+                                            {{thead.name}}<br>{{thead.unit}}
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tableTr"
+                                        ng-repeat="tbody in serviceNet.data.tbodyList track by $index" >
+                                        <td ng-repeat="item in serviceNet.data.theadList"
+                                            ng-style="{'width': + item.width + 'rem'}"
+                                            class="tableTd">
+                                            {{tbody[item.key_name]}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div ng-if="serviceNet.data.updateStatus === RQ.FAIL || serviceNet.data.updateStatus === RQ.NODATA" style="height: 90%;width: 100%;text-align: center;">
+                                <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': + heightCoefficient * 10 + 'px'}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cm-7" style="position: absolute;margin-left: 3.5rem;height: 5%;margin-top: -16px;" >
+                    <div ng-if="serviceNet.page.totalPage > 1"
+                         page
+                         current_page="serviceNet.page.currentPage"
+                         page_size="serviceNet.page.pageSize"
+                         total_result="serviceNet.page.totalResult"
+                         total_page="serviceNet.page.totalPage"
+                         show_page="serviceNet.page.showPage"
+                         previous_page="serviceNet.page.previousPage()"
+                         next_page="serviceNet.page.nextPage()"
+                         page_click="serviceNet.page.pageClick(currentPage)">
+                    </div>
+                </div>
+            </div>
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 15%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{topNExportTrend.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="topNExportTrend.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 85%;">
+                    <div ng-if="topNExportTrend.data.updateStatus === RQ.SUCCESS" resize echart option="topNExportTrend.data.option" style="height: 100%;width: 100%;"></div>
+                    <div ng-if="topNExportTrend.data.updateStatus === RQ.FAIL || topNExportTrend.data.updateStatus === RQ.NODATA || topNExportTrend.data.updateStatus === RQ.LOADING" style="height: 90%;width: 100%;text-align: center;">
+                        <img src="img/coss/nodata.png" alt=""  ng-style="{'padding-top': + heightCoefficient * 3 + 'px'}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

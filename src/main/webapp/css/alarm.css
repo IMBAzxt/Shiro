@@ -1,0 +1,289 @@
+.alarmThresholdtitle{
+    border: 1px solid #e5e5e5;
+    text-align:center;
+    background:#4bca81;
+    color:#ffffff;
+    line-height: 34px;
+}
+.alarmThresholdTable{
+    border-top: 1px solid #e5e5e5;
+    text-align:center;
+    font-size:100%;
+}
+table.gridtable {
+    table-layout:fixed ;
+    word-wrap:break-word;
+    width: 100%;
+    text-align:center;
+    font-size:100%;
+
+    border-collapse: collapse;
+}
+table.gridtable td {
+    line-height: 34px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #e5e5e5;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #e5e5e5;
+    background-color: #ffffff;
+}
+.buttonRow{
+    line-heigh: 34px;
+}
+
+.buttonRow ul{
+    padding-left: 6px;
+}
+
+.buttonRow ul li{
+    line-height: 34px;
+    margin-right: 15px;
+
+}
+
+
+.buttonRow button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+.buttonRowGray{
+    line-heigh: 34px;
+}
+
+.buttonRowGray ul{
+    padding-left: 6px;
+}
+
+.buttonRowGray ul li{
+    line-height: 34px;
+    margin-right: 15px;
+
+}
+.buttonRowGray button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #cccccc;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.buttonRowGray button:hover{
+    border-color: #cccccc;
+    background-color: #ffffff;
+    color: #cccccc;
+}
+
+.buttonRow button:hover{
+    border-color: #cccccc;
+    background-color: #ffffff;
+    color: #72d5ff;
+}
+
+.buttonRow button:active{
+    border-color: #cccccc;
+    color: #72d5ff;
+    background-color: #ffffff;
+}
+.ngTableHead{
+    background-color:#999999;
+    color: #ffffff;
+    font-size: 12px;
+    height: 34px;
+}
+.table.blacktable{
+    /*height: 36px !important;	*/
+}
+.table.blacktable th{
+    border-bottom:1px solid #999999 !important;
+    height: 28px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-right: 4px !important;
+    padding-left:  4px !important;
+}
+.ngTableHead input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: #808080;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+/*过滤行*/
+.ngTableFilter{
+    /*height: 36px !important;	*/
+}
+
+.ngTableFilter th{
+    border-bottom:1px solid #e5e5e5 !important;
+    height: 28px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-right: 4px !important;
+    padding-left:  4px !important;
+}
+.presentAlarm{
+    color:#FFA500;
+}
+.seriousAlarm{
+    color:#FF4040;
+}
+
+.alarmThresholdModal .formDiv table{
+    vertical-align: middle;
+    border-collapse:separate;
+    border-spacing:24px 30px;
+}
+
+alarmThresholdModal .formDiv table th{
+    font-size: 14px;
+    color: #333333;
+    text-align: right;
+}
+
+.alarmThresholdModal .formDiv table td{
+    font-size: 12px;
+    color: #999999;
+    text-align: left;
+}
+
+.alarmThresholdModal .formDiv table td input[type="text"]{
+    border-radius: 3px;
+    width: 40px;
+    height: 22px;
+    border:1px;
+    border-bottom-style:none;
+    border-top-style:none;
+    border-left-style:none;
+    border-right-style:none;
+}
+
+.alarmThresholdModal .mmHeader{
+    min-height: 36px;
+    font-size: 16px;
+    background-color: #4bca81;
+    color:#FFFFFF;
+    line-height: 36px;
+    paddding : 0px;
+    padding-left: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.alarmThresholdModal .formDiv table td textarea{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    height: 72px;
+    width: 310px;
+}
+
+.alarmThresholdModal .formDiv .redSpan{
+    color: red;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.alarmThresholdModal .formDiv ul li{
+    line-height: 24px;
+    width: 77px;
+}
+
+.saveBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #0076de;
+    margin-right: 48px;
+}
+
+.saveBtn:hover{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.saveBtn:active{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.resetBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #0076de;
+    border: 1px solid #e5e5e5;
+}
+.resetBtn:hover{
+    color: #0076de;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.resetBtn:active{
+    color: #72d5ff;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.alarmThresholdtable {
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    border-right:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    font-size: 12px;
+}
+
+.alarmThresholdtable th{
+    border-left:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    height: 32px;
+}
+
+.alarmThresholdtable td{
+    border-left:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+    text-align: center;
+    vertical-align: middle;
+    height: 32px;
+    color: #0076de;
+}
+
+.alarmul {
+
+}
+
+.alarmul li{
+    text-align:center;
+}
+
+.alarm li span{
+    font-size: 20px;
+}

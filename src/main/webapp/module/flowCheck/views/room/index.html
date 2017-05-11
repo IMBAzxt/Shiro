@@ -1,0 +1,64 @@
+<div  ng-controller="roomCtrl" class="cm cm-16">
+    <div >
+        <span style="float: left;padding-left: 20px;padding-top: 12px;">设备类型：</span>
+        <ui-select ng-model="serverType" on-select="selectServerType($item, $model,$select)" style="width: 300px;float: left;padding-bottom: 5px;padding-top:5px;">
+            <ui-select-match placeholder="请选择">{{$select.selected.ptype}}</ui-select-match>
+            <ui-select-choices repeat="item in serverTypeList | filter: $select.search">
+                <div ng-bind-html="item.ptype | highlight: $select.search"></div>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+    <div class="cm cm-16"  custom-scrollbar box-height="90%" style="height: 90%;">
+        <div ng-if="menu.data.level === 1 && status === 1" class="cm-16" >
+            <div class="cm-16" style="padding-left: 20px;">
+                机房
+            </div>
+            <div class="cm cm-8" ng-repeat="lineOption in optionList" >
+                <div class="lineChar"  resize echart option="lineOption" ></div>
+            </div>
+        </div>
+        <div ng-if="menu.data.level === 2 && status === 1" class="cm-16" >
+            <div class="cm-16" style="padding-left: 20px;">
+                设备
+            </div>
+            <div class="cm cm-8" ng-repeat="serverOption in serverChartList" >
+                <div class="lineChar" resize echart option="serverOption" ></div>
+            </div>
+            <div class="cm cm-16" style="margin-left: 3rem;margin-top: 10px;height: 20px; ">
+                <div  ng-if="server.page.totalPage > 1"
+                      page
+                     current_page="server.page.currentPage"
+                     page_size="server.page.pageSize"
+                     total_result="server.page.totalResult"
+                     total_page="server.page.totalPage"
+                     show_page="server.page.showPage"
+                     previous_page="server.page.previousPage()"
+                     next_page="server.page.nextPage()"
+                     page_click="server.page.pageClick(currentPage)">
+                </div>
+            </div>
+        </div>
+        <div ng-if="menu.data.level === 2 && status === 1" class="cm cm-16"  style="height: 5px;box-shadow: 2px 2px 1px #b9b9b9;margin-bottom: 10px;"></div>
+        <div ng-if="menu.data.level === 2 && status === 1" class="cm-16" >
+            <div class="cm cm-16" style="padding-left: 20px;">
+                链路
+            </div>
+            <div class="cm cm-8" ng-repeat="linkOption in linkChartList" >
+                <div class="lineChar" resize echart option="linkOption" ></div>
+            </div>
+            <div class="cm-16" style="margin-left: 3rem;margin-top: 10px;height: 20px;">
+                <div ng-if="link.page.totalPage > 1"
+                     page
+                     current_page="link.page.currentPage"
+                     page_size="link.page.pageSize"
+                     total_result="link.page.totalResult"
+                     total_page="link.page.totalPage"
+                     show_page="link.page.showPage"
+                     previous_page="link.page.previousPage()"
+                     next_page="link.page.nextPage()"
+                     page_click="link.page.pageClick(currentPage)">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

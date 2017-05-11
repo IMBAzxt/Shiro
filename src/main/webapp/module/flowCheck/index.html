@@ -1,0 +1,26 @@
+<div ng-controller="flowCheckCtrl" style="height: 100%;">
+
+    <div class="cm cm-2" style="background-color: rgb(42,49,56);padding-top: 20px;">
+        <div >
+            <div class="cm-2 commonCenter menuSpace" >
+                <p class="contentMenuHeigth" ng-class="{true:'contentMenuActive', false:'contentMenuUnActive'}[menu.data.name === '总览']">
+                    <a  ng-click="menu.events.menuClick('总览','',1)" ui-sref="index.flowCheck.service" class="memu word">总览</a>
+                </p>
+            </div>
+            <div class="cm-2 commonCenter menuSpace" ng-repeat-start="data in menu.data.dataList" >
+                <p class="contentMenuHeigth" ng-class="{true:'contentMenuActive', false:'contentMenuUnActive'}[menu.data.name === data.name || menu.data.parentName === data.name]">
+                    <a ng-click="menu.events.menuClick(data.name,'',1)" ui-sref="index.flowCheck.room" class="memu word">{{data.name}}</a>
+                </p>
+            </div>
+            <div ng-if="menu.data.name === data.name || menu.data.parentName === data.name" class="commonCenter" style="width: 1.6rem;margin-left: 0.4rem;cursor: pointer" ng-repeat-end>
+                <p class="contentSubMenuHeigth"  ng-repeat="sub in data.subMenu" ng-class="{true:'contentMenuActive', false:'contentMenuUnActive'}[menu.data.name === sub.name]">
+                    <a ng-click="menu.events.menuClick(sub.name,data.name,2)" class="memu word2">{{sub.name}}</a>
+                </p>
+            </div>
+          
+        </div>
+    </div>
+    <div class="cm cm-16">
+        <div class="cm cm-16" ui-view ></div>
+    </div>
+</div>

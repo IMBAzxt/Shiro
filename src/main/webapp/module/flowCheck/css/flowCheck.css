@@ -1,0 +1,51 @@
+
+.contentMenuActive {
+    background-color: #4bca81;
+}
+.contentMenuUnActive {
+    background-color: rgb(56,63,69);
+}
+
+.menuSpace {
+    padding: 0 0 0.02rem 0;
+}
+.contentMenuHeigth {
+    padding-bottom: 0.05rem;
+}
+
+.contentSubMenuHeigth {
+    padding-bottom: 0.05rem;
+    margin-bottom: 0.15rem;
+}
+
+.cm .cm-cmnet {
+    width: 7.75rem;
+}
+.cmnetGrid {
+    border:1px dashed RGB(64,64,64);
+    margin-left: 0.1rem;
+}
+
+.cmnetButton {
+    border:1px solid RGB(35,94,181);
+    height: 80%;
+    padding: 0rem 0.1rem;
+}
+
+.cmnetServiceBar {
+    border:1px solid #ffffff;
+}
+
+.cmnetButtonActive {
+    color: #ffffff;
+    font-size: 0.19rem;
+}
+
+.cmnetButtonUnActive {
+    color: RGB(46,116,197);
+}
+
+.content-main {
+    margin-left: 0.3rem;
+    margin-right: 0.4rem;
+}

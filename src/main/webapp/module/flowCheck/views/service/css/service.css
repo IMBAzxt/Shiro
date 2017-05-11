@@ -1,0 +1,13 @@
+.serviceGrid {
+    /*border:1px dashed RGB(64,64,64);*/
+    margin-left: 0.1rem;
+    height: 49%;
+}
+
+.cm-service {
+    width: 3.5rem;
+}
+
+.service-table {
+    width: 9.8rem;
+}

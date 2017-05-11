@@ -1,0 +1,180 @@
+/*IDC资源分析*/
+.idcCoss .idcShowInfoDiv{
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+}
+.idcCoss .idcShowInfoDiv ul{
+    height: 60px;
+}
+.idcCoss .idcShowInfoDiv ul li{
+    height: 60px;
+    border-right: 1px solid #cccccc;
+}
+.idcCoss .idcShowInfoDiv .title{
+    font-size: 12px;
+    color: #666666;
+}
+
+.idcCoss .idcShowInfoDiv .num{
+    font-size: 20px;
+    color: #0076de;
+}
+
+.idcCoss .idcShowInfoDiv table{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.idcCoss .idcShowInfoDiv table td{
+    min-width: 166px;
+}
+
+.idcCoss .idcRankDiv{
+    margin-top: 24px;
+}
+
+.idcCoss .idcRankDiv .titleDiv{
+    background-color: #4bca81;
+    color: #ffffff;
+    line-height: 34px;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.idcCoss .idcRankDiv .titleDiv .infoSapn{
+    border: 1px solid #FFFFFF;
+    font-size: 12px;
+    height: 24px;
+    width: 39px;
+    margin-right: 6px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 3px;
+}
+
+.idcCoss .idcRankDiv .titleDiv .infoSapn a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.idcCoss .idcRankDiv .idcContentDiv{
+    border-right: 1px solid #e5e5e5;
+}
+
+.idcCoss .idcRankDiv .idcContentDiv ul{
+    min-height: 400px;
+}
+
+.idcCoss .idcRankDiv .idcContentDiv ul li{
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.idcCoss .idcRankDiv .idcContentDiv .spanDiv{
+    font-size: 14px;
+    margin-right: 6px;
+    min-width: 83px;
+    width: 23%;
+}
+
+.idcCoss .idcContentDiv .pgsDiv{
+    min-width: 300px;
+    width: 70%;
+    margin-top: 13px;
+}
+
+.idcCoss .idcContentDiv .progressDiv{
+    height: 12px;
+    font-size: 10px;
+    margin-bottom: 0px;
+    border-radius: 3px;
+}
+
+.idcCoss .idcContentDiv .gBar{
+    background-color: #4bca81;
+    line-height: 12px;
+}
+
+.idcCoss .idcContentDiv .yBar{
+    background-color: #f0b550;
+    line-height: 12px;
+}
+
+.idcCoss .idcContentDiv .bBar{
+    background-color: #6ac2f5;
+    line-height: 12px;
+}
+
+.idcCoss .bRankDiv ul{
+    height: 400px;
+}
+
+.idcCoss .bRankDiv ul li{
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.idcCoss .bRankDiv .spanDiv{
+    font-size: 14px;
+    margin-right: 6px;
+    min-width: 83px;
+    width: 25%;
+}
+
+.idcCoss .modalTableSSInput{
+    width: 300px;
+    height: 24px;
+    background-image: url("../img/biaoge-jiansuo-icon.png");
+    background-repeat: no-repeat;
+    padding-top:3px;
+    padding-left: 30px;
+    background-position: 6px 4px;
+}
+
+.idcCoss .idcContentDiv .sxDiv{
+    width: 31px;
+    height:40px;
+    position: absolute;
+    left:-30px;
+}
+
+.idcCoss .idcContentDiv .contentsActive{
+    background-color: #daf5ff;
+    color: #0076de;
+}
+
+.idcCoss .idcContentDiv .sxActive{
+    background-color: #daf5ff;
+    border-right: 1px solid #e5e5e5;
+}
+
+.idcCoss .idcContentDiv .borderActive{
+    background-image: url("../img/xuanzhong-fengexian.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 8px;
+    height: 40px;
+    /*    margin-right: -38px;
+        float: right;*/
+    position: absolute;
+    left: 100%;
+}
+
+.idcCoss .bRankDiv .pgsDiv{
+    min-width: 270px;
+    /*width: 76%;*/
+    width: 50%;
+    margin-top: 15px;
+}
+
+.idcCoss .bRankDiv .progressDiv{
+    height: 12px;
+    font-size: 10px;
+    margin-bottom: 0px;
+    border-radius: 3px;
+}
+
+.idcCoss .bRankDiv .gBar{
+    background-color: #4bca81;
+    line-height: 12px;
+}

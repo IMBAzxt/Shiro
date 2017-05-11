@@ -1,0 +1,97 @@
+/* ##########  */
+/*   $GLOBAL   */
+/* ##########  */
+/* line 10, ../sass/typica-login.scss */
+html {
+    height: 100%;
+}
+
+/* line 13, ../sass/typica-login.scss */
+body {
+    background: url(../img/loginbg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    background-color: #eee;
+}
+
+.loginTitleDiv{
+    position: absolute;
+    font-size: 24px;
+    color: #FFFFFF;
+    top: 32px;
+    left: 26px;
+}
+
+.formDiv{
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin-top: -185px;
+    margin-left: -235px;
+    /*padding: 25px;*/
+    width: 532px;
+    height: 448px;
+    background: white;
+    text-align: center;
+    padding-top: 36px;
+}
+
+.heading{
+    font-size: 18px;
+    color: #333333;
+    padding-bottom: 10px;
+    width: 446px;
+    margin-left: 46px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 72px;
+}
+
+.formDiv .loginInput{
+    width: 306px;
+    border: 0px;
+    border-bottom: 1px solid #999999;
+    padding: 6px;
+}
+
+.formDiv .loginLable{
+    width: 28px;
+    height: 28px;
+}
+
+.formDiv .formContent{
+    width: 338px;
+    margin-left: 99px;
+}
+
+.formDiv .usernameInputDiv{
+    margin-bottom: 42px;
+}
+
+.formDiv .passwordeInputDiv{
+    margin-bottom: 50px;
+}
+
+.formDiv .formBtn{
+    height: 40px;
+    width: 320px;
+    border-radius: 3px;
+    background-color: #0076dd;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.formDiv .formBtn:hover{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.formDiv .formBtn:active{
+    background-color: #72d5ff;
+    color: #ffffff;
+}

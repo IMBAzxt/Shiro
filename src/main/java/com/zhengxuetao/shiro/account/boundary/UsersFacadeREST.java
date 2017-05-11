@@ -25,7 +25,7 @@ import javax.ws.rs.Produces;
  * @author ThinkPad
  */
 @Stateless
-@Path("com.zhengxuetao.shiro.login.users")
+@Path("user")
 public class UsersFacadeREST extends AbstractFacade<Users> {
     @PersistenceContext(unitName = "com.zhengxuetao.shiro")
     private EntityManager em;

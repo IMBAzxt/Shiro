@@ -1,0 +1,37 @@
+.dashoardCoss{}
+/*.dashoardCoss a{
+    color:  #ffffff;
+    color: #666666;
+    text-decoration:none;
+}
+.dashoardCoss .switchActive{
+    color: #0076de;
+    font: bold;
+}
+.dashoardCoss .switchActive a{
+    color: #0076de;
+    font: bold;
+    text-decoration:none;
+}*/
+
+.dashoardCoss .greenTitle{
+    height: 34px;
+    background-color: #4bca81;
+    border-radius: 3px;
+    /*margin-bottom: 11px;*/
+}
+.dashoardCoss .greenTitle span{
+    font-size: 16px;
+    line-height: 34px;
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.dashoardCoss .whiteBakTitle{
+    line-height: 34px;
+}
+.dashoardCoss .whiteBakTitle span{
+    font-size: 14px;
+    line-height: 34px;
+    color: #666666;
+}

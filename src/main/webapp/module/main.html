@@ -1,0 +1,17 @@
+<div class="wrap" resizeheigth>
+    <div style="height: 10%;background-color: rgb(0,118,222);color: #FFFFFF;">
+        <div class="cm cm-5">
+        </div>
+        <div class="cm cm-8">
+            <div class="cm cm-10" >
+                <p style="height: 20%"></p>
+                <p class="title" style="color: #FFFFFF;">{{systemTitle}}</p>
+            </div>
+        </div>
+        <div class="cm cm-5 commonCenter " >
+            <p style="height: 40%"></p>
+            <input id="endTime" class="dateStyle" type="text" ng-click="endTimeClick()" ng-model="endTime" >
+        </div>
+    </div>
+    <div  style="height: 90%;" ui-view></div>
+</div>

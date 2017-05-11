@@ -1,0 +1,263 @@
+/*网元拓扑*/
+.networkTopology .titleDivs .titleText {
+    font-size: 16px;
+    color: #333333;
+    position: relative;
+    padding-left: 180px;
+}
+.networkTopology .titleDivs .infoDiv{
+    float: right;
+    padding-right: 10px;
+    line-height: 24px;
+    color: #e5e5e5;
+}
+.networkTopology .titleDivs .infoDiv .infoSapn{
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
+    height: 24px;
+    width: 39px;
+    margin-right: 6px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 3px;
+}
+
+
+.networkTopology .netRightDiv{
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+.networkTopology .netRightDiv .p1Div{
+    float: left;
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+.networkTopology .netRightDiv .p1Div .numberDiv{
+    width: 17px;
+    margin-right: 6px;
+    float: left;
+}
+
+.networkTopology .netRightDiv .p1Div .textDiv{
+    width:70px;
+    float: left;
+}
+
+.networkTopology .netRightDiv .p3Div{
+    float: right;
+    margin-left: 6px;
+    margin-right: 10px;
+    width:24px;
+}
+
+.networkTopology .netRightDiv ul li{
+    line-height: 40px;
+    cursor:pointer;/*鼠标移动到时出现小手图案*/
+}
+.networkTopology .netRightDiv .processDiv{
+    width:128px;
+    height:10px;
+    float: left;
+    padding-top: 18px;
+}
+.networkTopology .netRightDiv .rankDiv{
+    margin-top: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.networkTopology .abnormalDataDiv  {
+    padding-left: 20px;
+}
+.networkTopology .abnormalDataDiv ul li {
+    white-space: nowrap;
+}
+.networkTopology .abnormalDataDiv .abnormalName {
+    font-size: 12px;
+    width: 100px;
+    text-align: right;
+    display:inline-block;
+}
+.networkTopology .abnormalDataDiv .abnormalData {
+    font-size: 12px;
+    color: #0076de;
+    white-space: normal;
+    width: 170px;
+    display:inline-block;
+}
+
+.networkTopology .alarmDataDiv  {
+    padding-left: 30px;
+}
+.networkTopology .alarmDataDiv ul li{
+    white-space: nowrap;
+}
+.networkTopology .alarmDataDiv .alarmName {
+    width: 74px;
+    text-align: right;
+    font-size: 12px;
+    display:inline-block;
+}
+.networkTopology .alarmDataDiv .alarmSpan {
+    color: #0076de;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    display:inline-block;
+}
+.networkTopology .alarmDataDiv .valarmSpan {
+    color: #fa4b4b;
+    font-size: 12px;
+    width: 100px;
+    text-align: center;
+    display:inline-block;
+}
+
+.networkTopology .centerTopDiv{
+    margin-left: 10px;
+    margin-top:10px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-top-width: 1px;
+}
+.networkTopology .centerTopDiv ul li{
+    color: #666666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.networkTopology .centerTopDiv ul li a{
+    color: #333333;
+    text-decoration: none;
+}
+.networkTopology .centerTopDiv ul li a:hover { 
+    color:#0076de; 
+    text-decoration:none; 
+} 
+.networkTopology .centerTopDiv ul li span{
+    color: #32cd32;
+    font-size: 12px;
+}
+
+.networkTopology .bottomDiv .titleDiv {
+    height:34px;
+    border-radius: 3px;
+    margin-bottom: 11px;
+}
+.networkTopology .bottomDiv .titleDiv .titleText{
+    font-size: 16px;
+    line-height: 34px;
+    color: #333333;
+    padding-left: 175px;
+}
+.networkTopology .bottomDiv .titleDiv .infoDiv{
+    float: right;
+    line-height: 34px;
+    color: #333333;
+}
+.networkTopology .bottomDiv .titleDiv .infoDiv .infoSapn{
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
+    height: 24px;
+    width: 39px;
+    margin-right: 6px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 3px;
+}
+.networkTopology .bottomDiv .titleDiv .infoDiv .infoSapn a{
+    text-decoration: none;
+}
+.networkTopology .bottomDiv .sxDiv{
+    width: 31px;
+    height:40px;
+    position: absolute;
+    left:-30px;
+}
+.networkTopology .bottomDiv .sxActive{
+    background-color: #daf5ff;
+}
+.networkTopology .bottomDiv .dsActive{
+    background-color: #daf5ff;
+    color: #0076de;
+}
+.networkTopology .bottomDiv .topTextDiv{
+    font-size: 14px;
+    color: #999999;
+}
+.networkTopology .bottomDiv .topTextDiv .liActive{
+    color: #0076de;
+    border-top: 1px solid #0076de;
+    border-bottom: 0px;
+}
+.networkTopology .bottomDiv .topTextDiv ul{
+    margin:0px;
+}
+.networkTopology .bottomDiv .topTextDiv ul li{
+    /*width: 144px;*/
+    width: 49%;
+    line-height: 34px;
+    border-bottom: 1px solid #e5e5e5;
+    border-right:  1px solid #e5e5e5;
+}
+.networkTopology .bottomDiv .topTextDiv ul li:hover{
+    color: #0076de;
+    border-top: 1px solid #0076de;
+    /*border-bottom: 1px solid #0076de;*/
+    border-bottom: 1px solid #e5e5e5;
+}
+.networkTopology .bottomDiv .p1Div{
+    float: left;
+    margin-right: 6px;
+    font-size: 14px;
+}
+.networkTopology .bottomDiv .p1Div .numberDiv{
+    width: 17px;
+    margin-right: 6px;
+    float: left;
+}
+.networkTopology .bottomDiv .p1Div .textDiv{
+    width:80px;
+    float: left;
+}
+.networkTopology .bottomDiv .p3Div{
+    float: right;
+    margin-left: 6px;
+    margin-right: 30px;
+    width:30px;
+}
+.networkTopology .bottomDiv .dataRankDiv ul li{
+    line-height: 40px;
+    /*height: 40px;*/
+    /*border-right: 1px solid #e5e5e5;*/
+    cursor:pointer;/*鼠标移动到时出现小手图案*/
+}
+.networkTopology .bottomDiv .processDiv{
+    width:128px;
+    height:10px;
+    float: left;
+    padding-top: 18px;
+    /*line-height: 40px;*/
+}
+.networkTopology .bottomDiv .rankDiv{
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 20px;
+}
+
+.networkTopology .nwtRightDiv .suspensionFrame {  
+    background-color: #cccccc;  
+    height: 24px;  
+    display:none;  
+    position:absolute;  
+    right:10px;  
+    top: 10px;  
+    border-radius:3px;
+} 
+.networkTopology .nwtRightDiv .suspensionFrame p{
+    font-size: 10px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 7px;
+    padding-left: 6px;
+    padding-right: 6px;
+}

@@ -1,0 +1,252 @@
+.reportTemplate{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.reportTemplate .tableSSInput{
+    width: 300px;
+    height: 27px;
+    background-image: url("../img/biaoge-jiansuo-icon.png");
+    background-repeat: no-repeat;
+    /*padding:6px 30px;*/
+    padding-top:3px;
+    padding-left: 30px;
+    /*    background-position-y: 4px;
+        background-position-x: 6px;*/
+    background-position: 6px 4px;
+}
+
+.reportTemplate .buttonRow{
+    line-heigh: 34px;
+}
+
+.reportTemplate .buttonRow ul{
+    padding-left: 10px;
+}
+
+.reportTemplate .buttonRow ul li{
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.reportTemplate .buttonRow button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.reportTemplate .buttonRow button:hover{
+    border-color: #cccccc;
+    background-color: #ffffff;
+}
+
+.reportTemplate .buttonRow button:active{
+    border-color: #cccccc;
+    color: #72d5ff;
+    background-color: #ffffff;
+}
+
+.reportTemplate .czButtonList{
+
+}
+
+.reportTemplate .czButtonList button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.reportTemplate .czButton{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.reportTemplate .mmHeader{
+    min-height: 36px;
+    font-size: 16px;
+    background-color: #4bca81;
+    color:#FFFFFF;
+    line-height: 36px;
+    paddding : 0px;
+    padding-left: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.reportTemplate .modelDiv{
+    padding-left: 71px;
+    padding-right: 71px;
+}
+.reportTemplate .modelDiv .redSpan{
+    color: red;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.reportTemplate .modelDiv table{
+    width: 100%;
+    vertical-align: middle;
+    border-collapse:separate;
+    border-spacing:1px 20px;
+}
+
+.reportTemplate .modelDiv table th{
+    width: 120px;
+    text-align: right;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.reportTemplate .modelDiv table td{
+    text-align: left;
+    vertical-align: middle;
+    color: #999999;
+}
+
+.reportTemplate .modelDiv table td input[type="text"]{
+    border-radius: 3px;
+    width: 310px;
+    height: 24px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #e5e5e5;
+}
+
+.reportTemplate .modelDiv table td textarea{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+.reportTemplate .modelDiv ul li{
+    line-height: 24px;
+    width: 77px;
+}
+
+.reportTemplate .saveBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #0076de;
+    margin-right: 48px;
+}
+
+.reportTemplate .saveBtn:hover{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.reportTemplate .saveBtn:active{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.reportTemplate .resetBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #0076de;
+    border: 1px solid #e5e5e5;
+}
+.reportTemplate .resetBtn:hover{
+    color: #0076de;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.reportTemplate .resetBtn:active{
+    color: #72d5ff;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.reportTemplate .modelDiv .columnDiv{
+    margin-left: 30px;
+}
+
+.reportTemplate .modelDiv .columnDiv table{
+    text-align: center;
+    vertical-align: middle;
+    border-right:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
+    font-size: 12px;
+    border-spacing: initial;
+    /*width: 60%;*/
+}
+
+.reportTemplate .modelDiv .columnDiv table th{
+    border-left:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    height: 32px;
+}
+
+.reportTemplate .modelDiv .columnDiv table td{
+    border-left:1px solid #e5e5e5;
+    border-top:1px solid #e5e5e5;
+    text-align: center;
+    vertical-align: middle;
+    height: 32px;
+    color: #0076de;
+}
+
+.reportTemplate .modelDiv .columnDiv table td input[type="text"]{
+    border-radius: 3px;
+    width: 200px;
+    height: 24px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #e5e5e5;
+}
+
+.reportTemplate .modelDiv .columnDiv table td img{
+    cursor: pointer;
+}
+
+.reportTemplate .selectMetricDiv{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    z-index: 10;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.reportTemplate .selectMetricDiv ul li{
+    line-height: 25px;
+    width: 180px;
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+.reportTemplate .selectMetricDiv ul li:hover{
+    color: #0076de;
+    text-decoration: underline;
+    background-color: #daf5ff;
+}

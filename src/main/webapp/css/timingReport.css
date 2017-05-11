@@ -1,0 +1,428 @@
+.timingReport{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+.timingReport .tableSSInput{
+    width: 300px;
+    height: 27px;
+    background-image: url("../img/biaoge-jiansuo-icon.png");
+    background-repeat: no-repeat;
+    /*padding:6px 30px;*/
+    padding-top:3px;
+    padding-left: 30px;
+    /*    background-position-y: 4px;
+        background-position-x: 6px;*/
+    background-position: 6px 4px;
+}
+
+.timingReport .buttonRow{
+    line-heigh: 34px;
+}
+
+.timingReport .buttonRow ul{
+    padding-left: 10px;
+}
+
+.timingReport .buttonRow ul li{
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.timingReport .buttonRow button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.timingReport .buttonRow button:hover{
+    border-color: #cccccc;
+    background-color: #ffffff;
+}
+
+.timingReport .buttonRow button:active{
+    border-color: #cccccc;
+    color: #72d5ff;
+    background-color: #ffffff;
+}
+
+.timingReport .czButtonList{
+
+}
+
+.timingReport .czButtonList button{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.timingReport .czButton{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.timingReport .modelTypeListDiv{
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
+    color: #999999;
+    border-radius: 3px;
+}
+
+.timingReport .modelTypeListDiv ul{
+    margin-left: 10px;
+}
+
+.timingReport .modelTypeListDiv ul li{
+    line-height: 39px;
+    cursor: pointer;
+}
+
+.timingReport .modelTypeListDiv .spanActive{
+    background-color: #0076de;
+    color:#ffffff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 3px;
+}
+
+.timingReport .modelModalTable table{
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4bca81;
+    border-radius: 4px;
+    min-width: 1290px;
+    border:solid #ffffff;
+    border-width:1px 0px 0px 1px;
+    word-break: keep-all;
+}
+
+.timingReport .modelModalTable table th{
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #ffffff;
+    border:solid #ffffff; 
+    border-width:0px 1px 1px 0px;
+    word-break: keep-all;
+    white-space: nowrap;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.timingReport .modelModalTable table th input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: #4bca81;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.timingReport .modelModalTable table th input[type=checkbox]:active{
+    border-color: green;
+    /*background: #ebebeb;*/
+}       
+
+.timingReport .modelModalTable table th input[type=checkbox]:hover {
+    border-color: #ffffff;
+    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.timingReport .modelModalTable table th input[type=checkbox]:checked {
+    /*background: #fff;*/
+}
+
+.timingReport .modelModalTable table th input[type=checkbox]:checked::after {
+    content: url('../img/cb.png');
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    left: -1px
+}
+
+.timingReport .modelModalTable table th input[type=checkbox]:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.timingReport .downloadModalDiv .mmHeader{
+    min-height: 36px;
+    font-size: 16px;
+    background-color: #4bca81;
+    color:#FFFFFF;
+    line-height: 36px;
+    paddding : 0px;
+    padding-left: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.timingReport .downloadModalDiv .showTableDiv table{
+    vertical-align: middle;
+    font-size: 14px;
+    text-align: right;
+    border-collapse:separate;
+    border-spacing:24px 30px;
+    color: #333333;
+}
+
+.timingReport .downloadModalDiv .showTableDiv table td input{
+    border-radius: 3px;
+    width: 310px;
+    height: 24px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.timingReport .downloadModalDiv .showTableDiv table td input:disabled{
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    cursor: not-allowed;
+    color: #C7BFB2;
+}
+
+.timingReport .downloadModalDiv .downloadButton{
+    height: 24px;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #0076de;
+    font-size: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    /*margin-left: 11px;*/
+}
+
+.timingReport .downloadModalDiv .downloadButton:hover{
+    border-color: #cccccc;
+    background-color: #ffffff;
+}
+
+.timingReport .downloadModalDiv .downloadButton:active{
+    border-color: #cccccc;
+    color: #72d5ff;
+    background-color: #ffffff;
+}
+
+.timingReport .downloadNgTable .ngTableHead{
+    background-color:#f3f3f3;
+    color: #999999;
+    font-size: 12px;
+    height: 34px;
+
+}
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]:active{
+    border-color: green;
+    /*background: #ebebeb;*/
+}       
+
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]:hover {
+    border-color: #e5e5e5;
+    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]:checked {
+    /*background: #fff;*/
+}
+
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]:checked::after {
+    content: url('../img/cb.png');
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    left: -1px
+}
+
+.timingReport .downloadNgTable .ngTableHead input[type=checkbox]:focus {
+    outline: none;
+    border-color: #e5e5e5;
+}
+
+.timingReport .downloadTableDiv .mgNgTabbleDiv{
+    background-color: #ffffff;
+    text-align: center;
+    height: 32px;
+}
+.timingReport .downloadTableDiv .mgNgTabbleDiv ul{
+    margin-bottom: 0px;
+}
+
+.timingReport .downloadTableDiv .mgNgTabbleDiv ul li a{
+    border: 0px;
+    background-color: #ffffff;
+}
+
+.timingReport .addReportModalDiv .formDiv table{
+    vertical-align: middle;
+    border-collapse:separate;
+    border-spacing:24px 30px;
+}
+
+.timingReport .addReportModalDiv .formDiv table th{
+    font-size: 14px;
+    color: #333333;
+    text-align: right;
+}
+
+.timingReport .addReportModalDiv .formDiv table td{
+    font-size: 12px;
+    color: #999999;
+    text-align: left;
+}
+
+.timingReport .addReportModalDiv .formDiv table td input[type="text"]{
+    border-radius: 3px;
+    width: 310px;
+    height: 24px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #e5e5e5;
+}
+
+.timingReport .addReportModalDiv .mmHeader{
+    min-height: 36px;
+    font-size: 16px;
+    background-color: #4bca81;
+    color:#FFFFFF;
+    line-height: 36px;
+    paddding : 0px;
+    padding-left: 10px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.timingReport .addReportModalDiv .formDiv table td textarea{
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    height: 72px;
+    width: 310px;
+}
+
+.timingReport .addReportModalDiv .formDiv .redSpan{
+    color: red;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.timingReport .addReportModalDiv .formDiv ul li{
+    line-height: 24px;
+    width: 77px;
+}
+
+.timingReport .formDiv .reportModelDiv ul li{
+    line-height: 24px;
+    width: inherit;
+}
+
+.timingReport .saveBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #0076de;
+    margin-right: 48px;
+}
+
+.timingReport .saveBtn:hover{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.timingReport .saveBtn:active{
+    background-color: #72d5ff;
+    color: #ffffff;
+}
+
+.timingReport .resetBtn{
+    width: 189px;
+    height: 34px;
+    border-radius: 3px;
+    color: #0076de;
+    border: 1px solid #e5e5e5;
+}
+.timingReport .resetBtn:hover{
+    color: #0076de;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.timingReport .resetBtn:active{
+    color: #72d5ff;
+    background-color: #FFFFFF;
+    border: 1px solid #cccccc;
+}
+
+.timingReport .addReportModalDiv .formDiv .selectDateTimeInput{
+    background-image: url("../img/time.png");
+    background-repeat: no-repeat;
+    background-position: 110px 5px;
+}
+
+.timingReport .spanClick{
+    color: #0076de;
+}
+
+.timingReport .spanClick:hover{
+    text-decoration: underline;
+    font: bold;
+    cursor: pointer;
+}

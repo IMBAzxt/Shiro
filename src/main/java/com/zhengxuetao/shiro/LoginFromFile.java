@@ -22,7 +22,7 @@ public class LoginFromFile {
     public void testLogin(String account, String pwd) {
         //1、获取 SecurityManager 工厂，此处使用 Ini 配置文件初始化 SecurityManager
         Factory<SecurityManager> factory
-                = new IniSecurityManagerFactory("classpath:shiro.ini");  //放在src/main/resources下可以通过classpath:文件名获取。
+                = new IniSecurityManagerFactory("classpath:shirotest.ini");  //放在src/main/resources下可以通过classpath:文件名获取。
         //2、得到 SecurityManager 实例 并绑定给 SecurityUtils
         SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);

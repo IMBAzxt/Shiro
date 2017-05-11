@@ -1,0 +1,463 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Microsoft YaHei','SimSun','Arial';
+}
+
+b {
+    font-weight: bolder;
+}
+
+a {
+    color: #0965b8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.r {
+    float: right;
+}
+
+input.text {
+    padding: 2px;
+}
+
+th {
+    text-align: left;
+}
+
+div.wrapped label.label {
+    float: left;
+    display: block;
+}
+
+div.wrapped .group-wrapper {
+    margin-left: 68px;
+}
+
+div.wrapped .group-wrapper label {
+    display: inline-block;
+    overflow: hidden;
+    width: 120px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    _margin: 4px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.date-select-bar {
+    margin-top: 9px;
+    padding-left: 8px;
+    padding-right: 7px;
+    margin-bottom: 13px;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+}
+
+.date-select-bar a {
+    display: inline-block;
+    color: #666;
+    height: 18px;
+    line-height: 10px;
+    padding: 4px 7px
+}
+
+.date-select-bar .date-bar-single-day {
+    padding: 4px 7px
+}
+
+.date-select-bar a.cur {
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 7px
+}
+
+.date-select-bar div.l,.date-select-bar div.r {
+    height: 22px;
+    line-height: 22px;
+    color: #06c;
+    margin: 0
+}
+
+.time-select-bar {
+    margin-top: 10px;
+    height: 24px;
+    line-height: 24px
+}
+
+.time-select-bar .combobox {
+    width: 154px;
+    vertical-align: middle
+}
+
+div.calendar-box {
+    margin-top: 10px;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #999;
+    display: none;
+    z-index: 3000;
+    padding: 8px 6px
+}
+
+div.calendar-box div.btn-bar {
+    text-align: right;
+    margin: 3px 0
+}
+
+div.calendar-box div.btn-bar input {
+    padding: 2px
+}
+
+.date-select-tip {
+    color: #F00;
+    padding: 3px;
+    text-align: center
+}
+
+.ds-wrap td {
+    font-size: 12px
+}
+
+.ds-wrap .ds-date-othermonth {
+    cursor: default
+}
+
+.ds-prevyear {
+    background: url(../img/ui.date_year_left.png);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin-top: 3px
+}
+
+.ds-nextyear {
+    background: url(../img/ui.date_year_right.png);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin-top: 3px
+}
+
+.ds-prevmonth {
+    margin-top: 20px;
+    _margin-top: 17px;
+    margin-left: 4px;
+    background: url(../img/ui.arrow_left_big.png);
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 9px;
+    cursor: pointer
+}
+
+.ds-nextmonth {
+    margin-top: 20px;
+    margin-left: 4px;
+    background: url(../img/ui.arrow_right_big.png);
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 9px;
+    cursor: pointer
+}
+
+.ds-wrap-month .ds-prevmonth,.ds-wrap-month .ds-nextmonth {
+    display: none
+}
+
+.ds-calendar-wrap {
+    font-family: arial
+}
+
+.ds-cal-head {
+    background-color: #e9e9e9;
+    width: 126px;
+    height: 19px;
+    text-align: center;
+    margin: 0 0 12px 20px;
+    cursor: pointer;
+    line-height: 19px;
+    color: #666;
+    font-weight: bold
+}
+
+.ds-wrap-month .ds-cal-head {
+    margin-bottom: 5px
+}
+
+.ds-cal-head-selected {
+    background-color: #666;
+    width: 126px;
+    height: 19px;
+    text-align: center;
+    margin: 0 0 12px 20px;
+    cursor: pointer;
+    line-height: 19px;
+    color: #fff;
+    font-weight: bold
+}
+
+.ds-wrap-month .ds-cal-head-selected {
+    margin-bottom: 5px
+}
+
+.ds-date-selected {
+    color: white;
+    background: #0076de
+}
+
+.ds-cal-wrap {
+    padding-right: 12px
+}
+
+.ds-cal-wrap td {
+    width: 18px;
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial;
+    height: 18px;
+    vertical-align: middle
+}
+
+.ds-cal-wrap td.byWeek {
+    width: 120px;
+    text-align: left;
+    text-indent: 10px;
+    line-height: 23px;
+    border: 1px solid #d7d7d7;
+    white-space: pre
+}
+
+.ds-cal-wrap thead td {
+    border-bottom: 1px solid #e9e9e9;
+    font-size: 12px
+}
+
+.ds-cal-wrap tbody td {
+    cursor: pointer
+}
+
+.ds-cal-wrap .ds-week {
+    background: url(../img/date_week.gif) left center no-repeat;
+    width: 20px;
+    cursor: pointer
+}
+
+.ds-cal-wrap .single .ds-week {
+    background: 0
+}
+
+.ds-cal-wrap thead .ds-week {
+    background: 0;
+    border: 0
+}
+
+.button-bar {
+    padding: 0 20px;
+    text-align: right;
+}
+
+.button-bar .button,.bar .button,.no-btnbar-here .button {
+    margin-right: 8px;
+}
+
+.button-bar a,.bar a,.no-btnbar-here a {
+    color: #666;
+    vertical-align: middle;
+}
+
+.combobox {
+    display: inline-block;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    color: #666;
+    background-color: #fff;
+    padding-right: 17px;
+    position: relative
+}
+
+.combobox .text {
+    background: 0;
+    padding: 0;
+    padding-left: 7px;
+    display: inline-block;
+    color: #666;
+    line-height: 24px;
+    vertical-align: middle;
+    /*	white-space: nowrap;
+            overflow: hidden*/
+}
+
+.combobox .arrow {
+    width: 17px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    _background-position: center 85%;
+    background-image: url(../img/ui.arrow_down.png)
+}
+
+.selected .arrow {
+    background-position: center;
+    _background-position: center 85%;
+    background-image: url(../img/ui.arrow_up.png);
+}
+
+.time-picker-bar {
+    position: relative;
+    line-height: normal;
+    margin-top: 10px;
+    margin-right: 10px;
+    *z-index: 1
+}
+
+.time-picker-bar .combobox {
+    padding-right: 30px
+}
+
+div.time-picker-box {
+    padding: 0 0 0 10px;
+    width: 568px;
+    display: block;
+    bottom: -213px;
+    right: 0
+}
+
+div.time-picker-bar .combobox .text {
+    _line-height: 21px
+}
+
+div.time-picker-box .ds-cal-blank {
+    padding-left: 8px
+}
+
+div.time-picker-box .date-calendar-body {
+    margin-right: 210px;
+    margin-top: 46px;
+    width: 350px
+}
+
+div.time-picker-box .date-input {
+    width: 199px;
+    _width: 188px;
+    height: 211px;
+    background-color: #f1f1f1;
+    border-left: 1px solid #ddd;
+    position: relative
+}
+
+div.time-picker-box .date-input .second {
+    margin-top: 5px
+}
+
+div.time-picker-box .date-input-short {
+    width: 76px;
+    padding: 0 3px;
+    margin-right: 4px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+    vertical-align: middle;
+    border: 1px solid #ddd
+}
+
+div.time-picker-box .date-input-long {
+    width: 108px;
+    padding-left: 46px
+}
+
+div.time-picker-box .date-input-label {
+    width: 100%;
+    display: inline-block;
+    padding: 3px 0;
+    cursor: pointer
+}
+
+div.time-picker-box .date-inpu-tabs {
+    height: 134px
+}
+
+div.time-picker-box .date-input-tab {
+    display: inline-block;
+    width: 199px;
+    _width: 188px;
+    _margin-left: 0;
+    position: relative;
+    left: -1px;
+    padding: 11px 0 11px 19px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1
+}
+
+div.time-picker-box .date-input fieldset.cur {
+    background-color: #fff;
+    border-right: 3px solid #2e7bc9;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd
+}
+
+div.time-picker-box .date-input strong {
+    display: block;
+    height: 35px;
+    margin: 4px 7px
+}
+
+div.time-picker-box .date-invalid {
+    border: 1px solid #0076de
+}
+
+.button-bar span.error {
+    display: inline-block;
+    width: 278px;
+    color: red;
+    text-align: left;
+}
+
+.button-bar {
+    padding: 0;
+}
+
+.button-bar .button, .bar .button, .no-btnbar-here .button {
+    margin-right: 8px;
+}
+
+.button-bar a, .bar a, .no-btnbar-here a {
+    color: #666;
+    vertical-align: middle;
+}
+
+a.button {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    color: #666;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 3px 8px;
+}

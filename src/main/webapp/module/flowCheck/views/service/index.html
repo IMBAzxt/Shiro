@@ -1,0 +1,67 @@
+<div  ng-controller="serviceCtrl" class="cm cm-16 ">
+    <div class="cm-15" style="height: 46%;margin-left: 0.5rem">
+        <div class="cm-15" style="height: 100%;">
+
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 10%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        
+                        <img style="padding-left: 0.1rem;" ng-if="totalRate.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 90%;">
+                    <div  resize echart option="checkCmnetStatistics.data.option" style="height: 100%;width: 100%;"></div>
+                    
+                </div>
+            </div>
+            <div class="cm cm-0-5" ></div>
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 10%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{checkDsfStatistics.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="totalRate.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 90%;">
+                    <div resize echart option="checkDsfStatistics.data.option" style="height: 100%;width: 100%;"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cm-15" style="height: 2%;"></div>
+    <div class="cm-15" style="height: 46%;margin-left: 0.5rem">
+        <div class="cm-15" style="height: 100%;">
+
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 10%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{totalRate.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="totalRate.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 90%;">
+                    <div  resize echart option="checkIdcStatistics.data.option" style="height: 100%;width: 100%;"></div>
+                    
+                </div>
+            </div>
+            <div class="cm cm cm-0-5"></div>
+            <div class="cm cm-7">
+                <div class="cm-7" style="height: 10%;">
+                    <p style="height: 20%;"></p>
+                    <p class="commonCenter titleSmall">
+                        {{totalRate.title.name}}
+                        <img style="padding-left: 0.1rem;" ng-if="totalRate.data.updateStatus === RQ.LOADING" src="img/coss/loading.gif" alt="">
+                    </p>
+                </div>
+                <div class="cm-7" style="height: 90%;">
+                    <div resize echart option="checkCacheStatistics.data.option" style="height: 100%;width: 100%;"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
