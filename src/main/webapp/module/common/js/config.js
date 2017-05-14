@@ -11,20 +11,6 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
         debug: false
     });
     $stateProvider
-            .state('login', {
-                url: "/login",
-                templateUrl: "module/login/login.html",
-                resolve: {
-                    loadPlugin: function ($ocLazyLoad) {
-                        return $ocLazyLoad.load([{
-                                files: ['module/login/login.css']
-                            }, {
-                                name: 'login.controller',
-                                files: ['module/login/login.js']
-                            }]);
-                    }
-                }
-            })
             .state('index', {
                 url: "/index",
                 templateUrl: "module/main.html",
